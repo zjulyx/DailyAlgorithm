@@ -4,13 +4,13 @@
 
 > [我的 GitHub](https://github.com/zjulyx)
 
-> [我的知乎专栏](https://zhuanlan.zhihu.com/c_1242508721932464128)
-
-> [我的头条号](https://www.toutiao.com/c/user/1090304683804520/#mid=1671643017345028)
+> [我的 Leetcode](https://leetcode-cn.com/u/suibianfahui/)
 
 > [我的 CSDN](https://me.csdn.net/zjulyx1993)
 
-> [我的 Leetcode](https://leetcode-cn.com/u/suibianfahui/)
+> [我的知乎专栏](https://zhuanlan.zhihu.com/c_1242508721932464128)
+
+> [我的头条号](https://www.toutiao.com/c/user/1090304683804520/#mid=1671643017345028)
 
 > [我的牛客网博客](https://blog.nowcoder.net/zjulyx)
 
