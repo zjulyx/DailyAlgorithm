@@ -65,6 +65,7 @@
 ```python
 class Solution:
     def findAnagrams(self, s: str, p: str) -> List[int]:
+        # 滑窗+双计数字典+unmatch变量
         if len(s) < len(p):
             # s更短, 一定没有满足条件的子串
             return []
