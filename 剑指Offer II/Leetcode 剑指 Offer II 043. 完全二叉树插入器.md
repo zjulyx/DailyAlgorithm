@@ -16,13 +16,13 @@
 
 ### 示例 1：
 
-- 输入：inputs = ["CBTInserter","insert","get_root"], inputs = [[[1]],[2],[]]
-- 输出：[null,1,[1,2]]
+- 输入：inputs = `["CBTInserter","insert","get_root"]`, inputs = `[[[1]],[2],[]]`
+- 输出：`[null,1,[1,2]]`
 
 ### 示例 2：
 
-- 输入：inputs = ["CBTInserter","insert","insert","get_root"], inputs = [[[1,2,3,4,5,6]],[7],[8],[]]
-- 输出：[null,3,4,[1,2,3,4,5,6,7,8]]
+- 输入：inputs = `["CBTInserter","insert","insert","get_root"]`, inputs = `[[[1,2,3,4,5,6]],[7],[8],[]]`
+- 输出：`[null,3,4,[1,2,3,4,5,6,7,8]]`
 
 ### 提示：
 
