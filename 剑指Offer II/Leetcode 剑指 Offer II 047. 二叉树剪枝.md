@@ -18,14 +18,14 @@
   只有红色节点满足条件“所有不包含 1 的子树”。
   右图为返回的答案。
 
-  ![](https://s3-lc-upload.s3.amazonaws.com/uploads/2018/04/06/1028_1.png)
+  ![](https://s3-lc-upload.s3.amazonaws.com/uploads/2018/04/06/1028_2.png)
 
 ### 示例 2:
 
 - 输入: [1,0,1,0,0,0,1]
 - 输出: [1,null,1,null,1]
 - 解释:
-  ![](https://s3-lc-upload.s3.amazonaws.com/uploads/2018/04/06/1028_2.png)
+  ![](https://s3-lc-upload.s3.amazonaws.com/uploads/2018/04/06/1028_1.png)
 
 ### 示例 3:
 
