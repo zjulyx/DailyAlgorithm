@@ -73,7 +73,7 @@ trie.search("app");     // 返回 True
 
 #### 复杂度
 
-- 复杂度 O(NC): 假设需要操作 N 次, 每次操作的字符串平均长度为 C, 那么每个操作都需要从根开始最多遍历 C 个节点, 时间复杂度都是 O(C), 所以总体时间复杂度就是 O(NC)
+- 时间复杂度 O(NC): 假设需要操作 N 次, 每次操作的字符串平均长度为 C, 那么每个操作都需要从根开始最多遍历 C 个节点, 时间复杂度都是 O(C), 所以总体时间复杂度就是 O(NC)
 - 空间复杂度 O(NC): Trie 中需要存储所有单词的字符, 最差情况下没有重复使用的节点, 空间复杂度就是 O(NC)
 
 #### 代码
@@ -143,7 +143,7 @@ class Trie:
 
 > [我的 Leetcode](https://leetcode-cn.com/u/suibianfahui/)
 
-> [我的 CSDn](https://me.csdn.net/zjulyx1993)
+> [我的 CSDN](https://me.csdn.net/zjulyx1993)
 
 > [我的知乎专栏](https://zhuanlan.zhihu.com/c_1242508721932464128)
 
