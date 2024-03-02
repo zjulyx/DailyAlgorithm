@@ -44,7 +44,7 @@
 - 分析题目, 一个最直接的思路就是, 使用一个字典存储所有 key-val 键值对
 - 这样 insert 时直接更新字典即可, 而针对 sum 操作, 遍历字典的所有 key, 如果它的前缀是 prefix 的话, 就累加它的值, 最终返回累加的和
 - 不过这样 sum 操作的复杂度有点高, 每次都需要遍历存储的所有 key, 有没有更高效的方法呢?
-- 在之前的题目中, 我们已经了解到, 字典树 trie 可以用来解决前缀问题 (TODO-062/063)
+- 在之前的题目中, 我们已经了解到, 字典树 trie 可以用来解决前缀问题 ([Leetcode 剑指 Offer II 062. 实现 Trie (前缀树)](https://mp.weixin.qq.com/s?__biz=MzA5MDk1MjI5MA==&mid=2247484734&idx=1&sn=c8f9ff3725bd6a41647bf1dba47d9dce&token=1922837604&lang=zh_CN#rd) / [Leetcode 剑指 Offer II 063. 单词替换](https://mp.weixin.qq.com/s?__biz=MzA5MDk1MjI5MA==&mid=2247484739&idx=1&sn=cf8e2e1b720712cfcbe3cd092e10d476&token=1214673232&lang=zh_CN#rd))
 - 这道题也不例外, 我们只需要稍作改动, 每个节点额外保存当前的值总和 sum, 同时也不需要 isWord 标记了
 - 另外我们还是需要维护 key-val 字典, 用于处理更新已有 key 的情况
 - 在执行 insert(key, val) 操作时:
