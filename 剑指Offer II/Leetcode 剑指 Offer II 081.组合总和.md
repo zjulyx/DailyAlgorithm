@@ -75,17 +75,18 @@ candidates 中的数字可以无限制重复被选取。如果至少一个所选
 ```python
 class Solution:
     def combinationSum(self, candidates: List[int], target: int) -> List[List[int]]:
-        # 方法1: 递归传入当前下标, 当前组合以及当前组合的数字之和
+        # 方法1: 两分支递归
         n = len(candidates)
         res = []
 
+        # 递归传入当前下标, 当前组合以及当前组合的数字之和
         def dfs(i, path, sm):
             if sm == target:
                 # 递归出口#1, 找到一个有效组合, 将其加入最终结果集
                 res.append(path)
                 return
             if i >= n or sm > target:
-                # 递归出口#2, 后面不可能再有有效组合了, 直接返回
+                # 递归出口#2, 当前组合已经不可能满足要求了, 直接返回
                 return
             # 情况1: 将该数字添加到组合中, 继续处理当前数字
             dfs(i, path + [candidates[i]], sm + candidates[i])
@@ -118,9 +119,10 @@ class Solution:
 ```python
 class Solution:
     def combinationSum(self, candidates: List[int], target: int) -> List[List[int]]:
-        # 方法2: 迭代三元组(当前下标,当前组合,当前组合的数字之和)
+        # 方法2: 三元组迭代
         n = len(candidates)
         res = []
+        # (当前下标,当前组合,当前组合的数字之和)
         tuples = [(0, [], 0)]
         for i, path, sm in tuples:
             if sm == target:
@@ -128,7 +130,7 @@ class Solution:
                 res.append(path)
                 continue
             if i >= n or sm > target:
-                # 后面不可能再有有效组合了, 不再添加后续数字, 继续循环
+                # 当前组合已经不可能满足要求了, 不再继续处理它, 继续循环
                 continue
             # 情况1: 将该数字添加到组合中, 继续处理当前数字
             tuples.append((i, path + [candidates[i]], sm + candidates[i]))
