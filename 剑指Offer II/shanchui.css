@@ -1,0 +1,185 @@
+.body {
+}
+
+.body p {
+  margin: 0 0 20px;
+  padding: 0;
+  line-height: 1.8em;
+  color: #3a3a3a;
+}
+
+.body h1 {
+  font-size: 2.1em;
+  line-height: 1.1em;
+  padding-top: 16px;
+  padding-bottom: 10px;
+  margin-bottom: 4px;
+  border-bottom: 1px solid #c99833;
+}
+.body h1 {
+  color: #515151;
+  font-weight: 700;
+}
+
+.body h2, h3, h4, h5, h6 {
+  line-height: 1.5em;
+  margin-top: 2.2em;
+  margin-bottom: 4px;
+}
+
+.body h1:after {}
+
+.body h2 {
+  margin-bottom: 35px;
+}
+
+
+.body h2 {
+  display: inline-block;
+  font-weight: bold;
+  background: linear-gradient(#fff 60%, #ffb11b 40%);
+  color: #515151;
+  padding: 2px 13px 2px;
+  margin-right: 3px;
+  height: 50%;
+}
+
+.body h2:after {}
+
+.body h3 {
+  line-height: 1.4;
+  padding-top: 10px;
+  margin: 10px 0 5px;
+}
+
+.body h3 .content {
+  color: #515151;
+  font-weight: 700;
+  font-size: 1.0em;
+  padding-left: 20px;
+  border-left: 3px solid #f9bf45;
+}
+
+.body h3:after {}
+
+.body blockquote {
+  background: #fff5e3;
+  display: block;
+  overflow: auto;
+  border-left: 3px solid rgba(0, 0, 0, 0.4);
+  border-left-color: #ffb11b;
+  color: #6a737d;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 10px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  border-left-color: #ffb11b;
+  background: #fff5e3;
+}
+
+.body blockquote p {
+  color: #595959;
+  margin: 0;
+  line-height: 26px;
+}
+
+.body a {
+  border: none;
+  text-decoration: none;
+  color: #dda52d;
+}
+
+.body a:hover {
+  color: #f9bf45;
+  text-decoration: underline;
+}
+
+.body ul {
+}
+
+.body ol {
+}
+
+.body li section {
+}
+
+.body strong {}
+
+.body em {}
+
+.body em strong {}
+
+.body del {
+  color: #d19826;
+}
+
+.body hr {
+  border-top: 1px solid #f9bf45;
+  margin: 20px 0px;
+}
+
+.body img {
+  width: 100%;
+  border-radius: 5px;
+  display: block;
+  margin-bottom: 15px;
+  height: auto;
+}
+
+.body figcaption {
+  color: #dda52d;
+  font-size: 14px;
+}
+
+.body p code, .body li code {
+  color: #9b6e23;
+  background-color: #fff5e3;
+  padding: 3px;
+  margin: 3px;
+}
+
+.body pre code {}
+
+.body table tr th,
+.body table tr td {
+  text-align: center;
+}
+
+.body .footnotes {
+  color: #ffb11b;
+  padding: 3px;
+}
+
+.body .footnote-ref {
+  color: #dda52d;
+  margin: 2px;
+  padding: 3px;
+}
+
+.body .footnotes:before {
+  margin: 30px 0px 15px 0px;
+  font-weight: 800;
+}
+
+.body .footnote-num {
+}
+
+.body .footnote-item p { 
+}
+
+.body .footnote-item p em {
+}
+
+.body .block-equation svg {
+}
+
+.body .inline-equation svg {  
+}
+
+.body .imageflow-img {
+  display: inline-block;
+  width:100%;
+  margin-bottom: 0;
+}
