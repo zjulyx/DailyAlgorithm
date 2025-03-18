@@ -1,4 +1,4 @@
-> 题目难度: 中等
+> 题目难度: 简单
 
 > [原题链接](https://leetcode.cn/problems/shu-zu-zhong-zhong-fu-de-shu-zi-lcof/)
 
