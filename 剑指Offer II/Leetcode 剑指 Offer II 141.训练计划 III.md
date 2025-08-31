@@ -131,7 +131,7 @@ class Solution:
         if not head or not head.next:
             # 空节点或者只有自身一个节点, 直接返回自身即可
             return head
-        nextHead = self.reverseList(head.next)
+        nextHead = self.trainningPlan(head.next)
         # head.next就是方法2的nextTail
         head.next.next = head
         # 注意此处必须先反转指向, 再将head.next置为空
