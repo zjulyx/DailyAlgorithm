@@ -1,48 +1,24 @@
 > 题目难度: 简单
 
-> [原题链接](https://leetcode-cn.com/problems/er-cha-shu-de-jing-xiang-lcof/)
+> [原题链接](https://leetcode.cn/problems/er-cha-shu-de-jing-xiang-lcof/description/)
 
-> 今天继续更新剑指 offer 系列, 这道题的递归做法很容易想到, 这里额外提供一种迭代方法帮助大家拓展思路
-
-> 老样子**晚上 6 点 45 分**准时更新公众号 **每日精选算法题**, 大家记得关注哦~ 另外在公众号里回复 **offer** 就能看到剑指 offer 系列当前连载的所有文章了
+> 今天继续更新 Leetcode 的剑指 Offer（专项突击版）系列, 大家在公众号 **算法精选** 里回复 `剑指offer2` 就能看到该系列当前连载的所有文章了, 记得关注哦~
 
 ## 题目描述
 
-请完成一个函数，输入一个二叉树，该函数输出它的镜像。
+给定一棵二叉树的根节点 root，请左右翻转这棵二叉树，并返回其根节点。
 
-例如输入：
+### 示例 1：
 
-```
-     4
-   /   \
-  2     7
- / \   / \
-1   3 6   9
-```
+![](https://pic.leetcode.cn/1694686821-qlvjod-%E7%BF%BB%E8%BD%AC%E4%BA%8C%E5%8F%89%E6%A0%91.png)
 
-镜像输出：
+- 输入：root = [5,7,9,8,3,2,4]
+- 输出：[5,9,7,4,2,3,8]
 
-```
-     4
-   /   \
-  7     2
- / \   / \
-9   6 3   1
-```
+### 提示：
 
-0 <= 节点个数 <= 1000
-
-## 题目样例
-
-### 示例
-
-#### 输入
-
-root = [4,2,7,1,3,6,9]
-
-#### 输出
-
-[4,7,2,9,6,3,1]
+- 树中节点数目范围在 [0, 100] 内
+- -100 <= Node.val <= 100
 
 ## 题目思考
 
@@ -72,11 +48,11 @@ root = [4,2,7,1,3,6,9]
 
 ```python
 class Solution:
-    def mirrorTree(self, root: TreeNode) -> TreeNode:
+    def flipTree(self, root: Optional[TreeNode]) -> Optional[TreeNode]:
         # 方法1: 递归交换左右子节点
         if not root:
             return root
-        left, right = self.mirrorTree(root.left), self.mirrorTree(root.right)
+        left, right = self.flipTree(root.left), self.flipTree(root.right)
         root.left = right
         root.right = left
         return root
@@ -103,7 +79,7 @@ class Solution:
 
 ```python
 class Solution:
-    def mirrorTree(self, root: TreeNode) -> TreeNode:
+    def flipTree(self, root: Optional[TreeNode]) -> Optional[TreeNode]:
         # 方法2: 迭代, 使用一个队列存储当前的节点
         if not root:
             return None
@@ -124,14 +100,18 @@ class Solution:
 
 > 大家可以在下面这些地方找到我~😊
 
-> [我的知乎专栏](https://zhuanlan.zhihu.com/c_1242508721932464128)
-
-> [我的 CSDN](https://me.csdn.net/zjulyx1993)
+> [我的 GitHub](https://github.com/zjulyx)
 
 > [我的 Leetcode](https://leetcode-cn.com/u/suibianfahui/)
 
+> [我的 CSDN](https://me.csdn.net/zjulyx1993)
+
+> [我的知乎专栏](https://zhuanlan.zhihu.com/c_1242508721932464128)
+
+> [我的头条号](https://www.toutiao.com/c/user/1090304683804520/#mid=1671643017345028)
+
 > [我的牛客网博客](https://blog.nowcoder.net/zjulyx)
 
-> 我的公众号: 每日精选算法题, 欢迎大家扫码关注~😊
+> 我的公众号: [算法精选](https://mp.weixin.qq.com/s?__biz=MzA5MDk1MjI5MA==&mid=2247484158&idx=1&sn=90176bac32cf7af40e4074c721fd8a95&chksm=900285f3a7750ce5a068c9c9773781461819633f2fd60533732637ec9520c908371ebc218d49&scene=178&cur_album_id=1386231241346859009#rd), 欢迎大家扫码关注~😊
 
-![每日精选算法题 - 微信扫一扫关注我](https://mmbiz.qpic.cn/mmbiz_jpg/1KjZicMlYPMgZWmoL4eYcs6UcfmvsetDWME2YJyaCp9oT9z3U573FWENBNhyOByxYI0epew6O37hiaOhdh90QeJg/640?wx_fmt=jpeg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+![算法精选 - 微信扫一扫关注我](https://pic1.zhimg.com/80/v2-7c988a7b35886df51596ef23616764ac_1440w.jpg)
