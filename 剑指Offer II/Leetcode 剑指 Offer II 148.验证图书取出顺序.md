@@ -1,4 +1,4 @@
-> 题目难度: 简单
+> 题目难度: 中等
 
 > [原题链接](https://leetcode.cn/problems/zhan-de-ya-ru-dan-chu-xu-lie-lcof/description/)
 
