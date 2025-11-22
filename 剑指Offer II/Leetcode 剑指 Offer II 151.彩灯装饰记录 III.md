@@ -1,19 +1,22 @@
-> 题目难度: 简单
+> 题目难度: 中等
 
-> [原题链接](https://leetcode.cn/problems/cong-shang-dao-xia-da-yin-er-cha-shu-ii-lcof/description/)
+> [原题链接](https://leetcode.cn/problems/cong-shang-dao-xia-da-yin-er-cha-shu-iii-lcof/description/)
 
 > 今天继续更新 Leetcode 的剑指 Offer（专项突击版）系列, 大家在公众号 **算法精选** 里回复 `剑指offer2` 就能看到该系列当前连载的所有文章了, 记得关注哦~
 
 ## 题目描述
 
-一棵圣诞树记作根节点为 root 的二叉树，节点值为该位置装饰彩灯的颜色编号。请按照从左到右的顺序返回每一层彩灯编号，每一层的结果记录于一行。
+一棵圣诞树记作根节点为 root 的二叉树，节点值为该位置装饰彩灯的颜色编号。请按照如下规则记录彩灯装饰结果：
+
+第一层按照从左到右的顺序记录
+除第一层外每一层的记录顺序均与上一层相反。即第一层为从左到右，第二层为从右到左。
 
 ### 示例 1：
 
 ![](https://pic.leetcode.cn/1694758674-XYrUiV-%E5%89%91%E6%8C%87%20Offer%2032%20-%20I_%E7%A4%BA%E4%BE%8B1.png)
 
 - 输入：root = [8,17,21,18,null,null,6]
-- 输出：[[8],[17,21],[18,6]]
+- 输出：[[8],[21,17],[18,6]]
 
 ### 提示：
 
@@ -21,17 +24,15 @@
 
 ## 题目思考
 
-1. 如何记录当前层的信息?
+1. 可以继续利用上周的方案吗, 不行的话需要进行哪些改动?
 
 ## 解决方案
 
 ### 思路
 
-- 相比上周那道题, 这里需要把每层节点都单独打印出来, 如果仍使用上周的方法, 就无法知道每层的边界在哪, 所以需要做出一些改变
-- 如果我们能够记录下当前层的节点边界, 然后当前层的子节点都加入队列后, 将队列更新为从下一层节点起点开始, 这样就确保每一层都单独被记下来了
-- 这就是今天这道题的思路: 按照每层来循环, 存当前层的节点长度 curlen, 新追加的下层节点起点下标自然就是 curlen, 所以当前层遍历完之后只需要将队列切片成 curlen 及以后的部分即可
-- 同样的, 由于是树, 每个节点只需要遍历一次, 所以不需要 visit 集合
-- 下面的代码又是个人觉得比较通用的另一个 BFS 模板, 它适用于需要单独处理每一层节点的情况, 供大家参考
+- 回顾上周那道题 `Leetcode 剑指 Offer II 150.彩灯装饰记录 II`, 我们是单独打印每一层的节点, 只不过都是从左到右的方向
+- 针对这道题, 我们可以额外维护一个变量, 记录当前方向, 每次到下一层时就调换方向即可
+- 也就是说, 只需要对上周题目的代码稍加改动就能搞定, 所以熟练掌握前面两种 BFS 的模板是很有必要的, 很多问题都能在它们基础上解决
 
 #### 复杂度
 
@@ -44,25 +45,29 @@
 
 ```python
 class Solution:
-    def decorateRecord(self, root: TreeNode) -> List[List[int]]:
+    def decorateRecord(self, root: Optional[TreeNode]) -> List[List[int]]:
         res = []
         if not root:
             return res
         q = [root]
+        # 初始从左到右遍历
+        fromleft = True
         while q:
-            # 当前层长度
             curlen = len(q)
-            curlevel = []
+            cur = []
             for node in q[:curlen]:
-                # 将当前层的节点值依次加入结果中
-                curlevel.append(node.val)
-                # 只追加非空子节点
+                cur.append(node.val)
                 if node.left:
                     q.append(node.left)
                 if node.right:
                     q.append(node.right)
-            res.append(curlevel)
-            # 队列切片, 开始处理下一层
+            if fromleft:
+                res.append(cur)
+            else:
+                # 从右向左的话只需要将该层的值翻转加入结果中即可
+                res.append(cur[::-1])
+            # 每一层结束后都调转方向
+            fromleft = not fromleft
             q = q[curlen:]
         return res
 ```
